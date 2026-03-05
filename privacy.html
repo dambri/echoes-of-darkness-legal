@@ -11,6 +11,324 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 40px 20px;
+    background-color: #13181D;
+    color: #EBCC88;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(235, 204, 136, 0.15);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+h2 {
+    margin-top: 35px;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+p {
+    color: #EBCC88;
+}
+
+ul {
+    margin-top: 10px;
+}
+
+li {
+    color: #EBCC88;
+}
+
+strong {
+    color: #FFFFFF;
+}
+
+a {
+    color: #EBCC88;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f5dca0;
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: rgba(235, 204, 136, 0.5);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Privacy Policy</h1>
+<p><strong>Last Updated:</strong> March 4, 2026</p>
+
+<h2>1. Introduction</h2>
+<p>
+Echoes of Darkness ("we", "our", or "the app") is developed and operated by Alexandre D'AMBRISI, independent developer based in France.
+</p>
+
+<p>
+We are committed to protecting your privacy and ensuring transparency regarding how your data is handled.
+</p>
+
+<p>
+This Privacy Policy explains what data is accessed, how it is processed, and your rights under applicable privacy laws, including the General Data Protection Regulation (GDPR).
+</p>
+
+<h2>2. Overview of Data Handling</h2>
+
+<p>Echoes of Darkness:</p>
+
+<ul>
+<li>Does not operate any backend server</li>
+<li>Does not store your personal data on remote databases</li>
+<li>Does not sell or share your data for advertising</li>
+<li>Does not use tracking or marketing analytics</li>
+</ul>
+
+<p>Your Destiny 2 game data flows directly from Bungie.net to your device.</p>
+
+<h2>3. Data We Access</h2>
+
+<h3>3.1 Bungie.net Game Data (Read-Only Access)</h3>
+
+<p>
+When you authenticate via Bungie.net OAuth, the app accesses your Destiny 2 data directly from Bungie's official API to display:
+</p>
+
+<ul>
+<li>Character information</li>
+<li>Activity history</li>
+<li>Raid statistics</li>
+<li>Performance metrics</li>
+</ul>
+
+<p>This data:</p>
+
+<ul>
+<li>Is retrieved directly from Bungie.net</li>
+<li>Is displayed only on your device</li>
+<li>Is never stored on our servers</li>
+<li>Is never shared with third parties</li>
+</ul>
+
+<p>
+Your use of Bungie services is subject to Bungie's own privacy policy.
+</p>
+
+<h3>3.2 Local Storage on Your Device</h3>
+
+<p>The app stores the following information locally on your device only:</p>
+
+<ul>
+<li>OAuth authentication tokens (securely stored in the iOS Keychain)</li>
+<li>Cached Bungie manifest data</li>
+<li>Temporarily cached statistics for performance purposes</li>
+</ul>
+
+<p>All local data is removed when:</p>
+
+<ul>
+<li>You log out</li>
+<li>You uninstall the app</li>
+</ul>
+
+<h3>3.3 Crash Reporting (Technical Diagnostics Only)</h3>
+
+<p>
+We use Firebase Crashlytics, a service provided by Google, to collect technical diagnostic data in the event of application crashes.
+</p>
+
+<p>Crashlytics may collect:</p>
+
+<ul>
+<li>Device model</li>
+<li>Operating system version</li>
+<li>App version</li>
+<li>Crash logs (stack traces)</li>
+<li>Time and date of crash</li>
+<li>General diagnostic data</li>
+</ul>
+
+<p>This information:</p>
+
+<ul>
+<li>Does not include your Bungie.net game data</li>
+<li>Does not include your Destiny 2 statistics</li>
+<li>Is used solely to diagnose and fix technical issues</li>
+<li>Is not used for advertising or profiling</li>
+</ul>
+
+<p>
+Crash data is processed by Google in accordance with:
+<a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+</p>
+
+<h2>4. Legal Basis for Processing (GDPR)</h2>
+
+<p>If you are located in the European Economic Area (EEA), we process data under the following legal bases:</p>
+
+<ul>
+<li><strong>Performance of a contract:</strong> To provide the app's core functionality (authentication and display of Destiny 2 statistics)</li>
+<li><strong>Legitimate interest:</strong> To maintain app stability and security through crash diagnostics</li>
+</ul>
+
+<p>We do not process data for marketing or advertising purposes.</p>
+
+<h2>5. International Data Transfers</h2>
+
+<p>
+Third-party services used by the app, including Bungie.net and Google Firebase, may process data outside the European Union.
+</p>
+
+<p>
+These providers operate under their own legal safeguards, including Standard Contractual Clauses where applicable.
+</p>
+
+<p>
+We do not independently transfer or store your data internationally.
+</p>
+
+<h2>6. Data Retention</h2>
+
+<ul>
+<li><strong>Authentication tokens:</strong> Stored locally until logout or app deletion</li>
+<li><strong>Cached game data:</strong> Stored locally until cleared or app deletion</li>
+<li><strong>Crash diagnostics:</strong> Retained by Firebase according to their default retention policies</li>
+</ul>
+
+<p>We do not retain any personal data on our own servers.</p>
+
+<h2>7. Your Rights (EEA Users)</h2>
+
+<p>If you are located in the European Economic Area, you have the right to:</p>
+
+<ul>
+<li>Request access to personal data processed about you</li>
+<li>Request correction of inaccurate data</li>
+<li>Request deletion of personal data</li>
+<li>Object to or restrict certain processing</li>
+<li>Request data portability where applicable</li>
+<li>Lodge a complaint with your local data protection authority (for example, the CNIL in France)</li>
+</ul>
+
+<p>
+Since we do not maintain our own database, most data access or deletion requests relating to game data must be directed to Bungie.net.
+</p>
+
+<p>
+For crash diagnostics handled by Firebase, you may contact us for assistance.
+</p>
+
+<h2>8. Children's Privacy</h2>
+
+<p>
+Echoes of Darkness does not knowingly collect personal data from children under the age of 13.
+</p>
+
+<p>
+If you believe that a child has provided personal information, please contact us and we will take appropriate steps.
+</p>
+
+<h2>9. Data Sharing</h2>
+
+<p>We do not:</p>
+
+<ul>
+<li>Sell personal information</li>
+<li>Share data with advertisers</li>
+<li>Use tracking technologies for marketing</li>
+<li>Store your Bungie.net password</li>
+<li>Operate a remote database</li>
+</ul>
+
+<p>
+Your Destiny 2 game data is retrieved directly from Bungie.net and displayed locally on your device.
+</p>
+
+<h2>10. Security Measures</h2>
+
+<p>We implement industry-standard security measures:</p>
+
+<ul>
+<li>OAuth authentication handled securely through Bungie</li>
+<li>Tokens stored in iOS Keychain</li>
+<li>Encrypted HTTPS communication</li>
+<li>No password storage</li>
+<li>No remote database infrastructure</li>
+</ul>
+
+<h2>11. Changes to This Privacy Policy</h2>
+
+<p>
+We may update this Privacy Policy from time to time.
+</p>
+
+<p>
+Updates will be reflected by modifying the "Last Updated" date above. Continued use of the app constitutes acceptance of the updated policy.
+</p>
+
+<h2>12. Contact Information</h2>
+
+<p>
+If you have questions regarding this Privacy Policy, you may contact:
+</p>
+
+<p>
+<strong>Alexandre D'AMBRISI</strong><br>
+Independent iOS Developer<br>
+France<br>
+Email: alexandre.dambrisi@pm.me
+</p>
+
+<h2>13. Transparency Statement</h2>
+
+<p>
+This Privacy Policy is intended to reflect applicable privacy regulations, including the General Data Protection Regulation (GDPR), where applicable.
+</p>
+
+<div class="footer">
+Echoes of Darkness – Privacy Policy
+</div>
+
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy – Echoes of Darkness</title>
+
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
     background-color: #f5f5f7;
     color: #1d1d1f;
 }
