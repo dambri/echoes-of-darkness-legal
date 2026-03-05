@@ -243,43 +243,6 @@
             color: #f5dca0;
         }
 
-        /* ── Legal Pages ── */
-        .legal-page {
-            display: none;
-        }
-
-        .legal-page.active {
-            display: block;
-        }
-
-        .legal-page h2 {
-            font-size: 1.8rem;
-        }
-
-        .legal-page h3 {
-            margin-top: 2rem;
-        }
-
-        .legal-page p {
-            margin-bottom: 1rem;
-            color: #EBCC88;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            color: #EBCC88;
-            text-decoration: none;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            transition: color 0.2s ease;
-        }
-
-        .back-link:hover {
-            color: #f5dca0;
-        }
-
         /* ── Footer ── */
         footer {
             text-align: center;
@@ -353,9 +316,8 @@
 
     <div class="container">
 
-        <!-- ═══════════════ MAIN PAGE ═══════════════ -->
-        <div id="main-page">
-            <div class="hero">
+
+        <div class="hero">
                 <p>
                     A powerful iOS companion app for Destiny players, featuring raid tracking, 
                     character informations, and comprehensive activity history powered by the Bungie.net API.
@@ -474,127 +436,19 @@
                     Destiny is a registered trademark of Bungie, Inc. This app is not affiliated with or endorsed by Bungie.
                 </p>
             </div>
-        </div>
 
-        <!-- ═══════════════ PRIVACY POLICY PAGE ═══════════════ -->
-        <div id="privacy-page" class="legal-page">
-            <a href="#" class="back-link" onclick="showPage('main'); return false;">← Back to Home</a>
-            <div class="section">
-                <h2>🔒 Privacy Policy</h2>
-                <p><strong>Last updated:</strong> March 2026</p>
-
-                <h3>Overview</h3>
-                <p>Echoes of Darkness ("the App") is developed by Alexandre D'AMBRISI. This Privacy Policy describes how your information is collected, used, and shared when you use the App.</p>
-
-                <h3>Information We Collect</h3>
-                <p>The App accesses your Destiny game data through the Bungie.net API using OAuth 2.0 authentication. This includes your Destiny characters, raid completions, activity history, and related game statistics. We only access data that you explicitly authorize through the Bungie.net authentication flow.</p>
-
-                <h3>How We Use Your Information</h3>
-                <p>Your Destiny game data is used solely to display your characters, raid progress, and activity history within the App. We do not sell, share, or distribute your personal data to third parties.</p>
-
-                <h3>Third-Party Services</h3>
-                <p>The App uses the following third-party services:</p>
-                <ul>
-                    <li><strong>Bungie.net API</strong> — To retrieve your Destiny game data. Subject to <a href="https://www.bungie.net/7/en/Legal/PrivacyPolicy" target="_blank" rel="noopener">Bungie's Privacy Policy</a>.</li>
-                    <li><strong>Firebase Crashlytics</strong> — To collect anonymous crash reports and diagnostics to improve app stability. No personally identifiable information is collected.</li>
-                </ul>
-
-                <h3>Data Storage & Security</h3>
-                <p>Authentication tokens are stored securely on your device. We do not store your Bungie account credentials. Your game data is fetched in real time and is not stored on any external server.</p>
-
-                <h3>Your Rights</h3>
-                <p>You can revoke the App's access to your Bungie.net account at any time through your Bungie.net account settings. Uninstalling the App will remove all locally stored data from your device.</p>
-
-                <h3>Children's Privacy</h3>
-                <p>The App is not intended for children under the age of 13. We do not knowingly collect personal information from children.</p>
-
-                <h3>Changes to This Policy</h3>
-                <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated revision date.</p>
-
-                <h3>Contact</h3>
-                <p>If you have any questions about this Privacy Policy, please contact Alexandre D'AMBRISI via the <a href="https://github.com/yourusername/echoesOfDarkness" target="_blank" rel="noopener">GitHub repository</a>.</p>
-            </div>
-        </div>
-
-        <!-- ═══════════════ TERMS OF USE PAGE ═══════════════ -->
-        <div id="terms-page" class="legal-page">
-            <a href="#" class="back-link" onclick="showPage('main'); return false;">← Back to Home</a>
-            <div class="section">
-                <h2>📋 Terms of Use</h2>
-                <p><strong>Last updated:</strong> March 2026</p>
-
-                <h3>Acceptance of Terms</h3>
-                <p>By downloading, installing, or using Echoes of Darkness ("the App"), you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use the App.</p>
-
-                <h3>Description of the App</h3>
-                <p>Echoes of Darkness is a companion app for Destiny players. It allows you to view your characters, track raid completions, and browse your activity history. The App is not a game and does not modify your Destiny account or game data in any way.</p>
-
-                <h3>Bungie.net Account</h3>
-                <p>To use the App, you must authenticate with a valid Bungie.net account. You are responsible for maintaining the security of your account credentials. The App accesses your data through the official Bungie.net API in compliance with Bungie's terms of service.</p>
-
-                <h3>Intellectual Property</h3>
-                <p>Destiny, the Destiny logo, and all related trademarks are the property of Bungie, Inc. This App is an independent project and is not affiliated with, endorsed by, or sponsored by Bungie, Inc. All original code and design are the property of Alexandre D'AMBRISI.</p>
-
-                <h3>Disclaimer of Warranties</h3>
-                <p>The App is provided "as is" and "as available" without warranties of any kind, either express or implied. We do not guarantee that the App will be error-free, uninterrupted, or that the data displayed will always be accurate, as it depends on the availability and accuracy of the Bungie.net API.</p>
-
-                <h3>Limitation of Liability</h3>
-                <p>To the fullest extent permitted by applicable law, Alexandre D'AMBRISI shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the App.</p>
-
-                <h3>Modifications</h3>
-                <p>We reserve the right to modify or discontinue the App at any time, with or without notice. We may also update these Terms of Use from time to time. Continued use of the App after changes constitutes acceptance of the revised terms.</p>
-
-                <h3>Governing Law</h3>
-                <p>These Terms shall be governed by and construed in accordance with the laws of France, without regard to conflict of law principles.</p>
-
-                <h3>Contact</h3>
-                <p>For questions about these Terms of Use, please contact Alexandre D'AMBRISI via the <a href="https://github.com/yourusername/echoesOfDarkness" target="_blank" rel="noopener">GitHub repository</a>.</p>
-            </div>
-        </div>
 
         <!-- ═══════════════ FOOTER ═══════════════ -->
         <footer>
             <p>&copy; 2023-2026 Echoes of Darkness. Created by Alexandre D'AMBRISI</p>
             <p style="margin-top: 0.5rem; font-size: 0.9rem;">Built with ❤️ using Swift and SwiftUI</p>
             <ul class="footer-links">
-                <li><a href="#" onclick="showPage('privacy'); return false;">Privacy Policy</a></li>
+                <li><a href="https://dambri.github.io/echoes-of-darkness-legal/privacy.html">Privacy Policy</a></li>
                 <li><span class="footer-sep">·</span></li>
-                <li><a href="#" onclick="showPage('terms'); return false;">Terms of Use</a></li>
+                <li><a href="https://dambri.github.io/echoes-of-darkness-legal/terms.html">Terms of Use</a></li>
             </ul>
         </footer>
     </div>
 
-    <script>
-        function showPage(page) {
-            document.getElementById('main-page').style.display = 'none';
-            document.getElementById('privacy-page').classList.remove('active');
-            document.getElementById('terms-page').classList.remove('active');
-
-            if (page === 'main') {
-                document.getElementById('main-page').style.display = 'block';
-            } else if (page === 'privacy') {
-                document.getElementById('privacy-page').classList.add('active');
-            } else if (page === 'terms') {
-                document.getElementById('terms-page').classList.add('active');
-            }
-
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Handle direct URL hash navigation (e.g. index.html#privacy)
-        function handleHash() {
-            var hash = window.location.hash.replace('#', '');
-            if (hash === 'privacy') {
-                showPage('privacy');
-            } else if (hash === 'terms') {
-                showPage('terms');
-            } else {
-                showPage('main');
-            }
-        }
-
-        window.addEventListener('hashchange', handleHash);
-        window.addEventListener('DOMContentLoaded', handleHash);
-    </script>
 </body>
 </html>
