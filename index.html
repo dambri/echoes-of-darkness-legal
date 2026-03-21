@@ -318,6 +318,141 @@
             transform: scale(1.03);
         }
 
+        /* ── Support / FAQ ── */
+        .contact-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            background: rgba(235, 204, 136, 0.07);
+            border: 1px solid rgba(235, 204, 136, 0.25);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-card-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .contact-card-body {
+            flex: 1;
+        }
+
+        .contact-card-body h3 {
+            margin-top: 0;
+            margin-bottom: 0.4rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-card-body p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: rgba(235, 204, 136, 0.75);
+        }
+
+        .contact-card-body a {
+            color: #EBCC88;
+            font-weight: 600;
+        }
+
+        .contact-card-body a:hover {
+            color: #f5dca0;
+            text-decoration: underline;
+        }
+
+        .response-badge {
+            display: inline-block;
+            margin-top: 0.5rem;
+            background: rgba(235, 204, 136, 0.12);
+            border: 1px solid rgba(235, 204, 136, 0.25);
+            border-radius: 20px;
+            padding: 0.2rem 0.75rem;
+            font-size: 0.8rem;
+            color: #EBCC88;
+        }
+
+        /* Accordion FAQ */
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .faq-item {
+            background: rgba(235, 204, 136, 0.04);
+            border: 1px solid rgba(235, 204, 136, 0.15);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: border-color 0.25s ease;
+        }
+
+        .faq-item.open {
+            border-color: rgba(235, 204, 136, 0.35);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            padding: 1.1rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: inherit;
+            transition: color 0.2s ease;
+        }
+
+        .faq-question:hover {
+            color: #f5dca0;
+        }
+
+        .faq-chevron {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            color: #EBCC88;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-chevron {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.25s ease;
+            padding: 0 1.25rem;
+            color: rgba(235, 204, 136, 0.85);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding: 0 1.25rem 1.1rem;
+        }
+
+        /* ── ul reset for faq-list ── */
+        .faq-list,
+        .faq-list li {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .faq-list li:before {
+            display: none;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -335,6 +470,11 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .contact-card {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
         }
     </style>
 </head>
@@ -346,138 +486,220 @@
 
     <div class="container">
 
-
         <div class="hero">
-                <p>
-                    A powerful iOS companion app for Destiny players, featuring raid tracking, 
-                    character informations, and comprehensive activity history powered by the Bungie.net API.
-                </p>
-                
-                <div class="badges">
-                    <span class="badge">📱 iOS</span>
-                    <span class="badge">🎮 Destiny Integration</span>
-                    <span class="badge">🔐 OAuth Authentication</span>
-                    <span class="badge">⚡ SwiftUI</span>
-                </div>
-
-                <div class="hero-buttons">
-                    <!-- App Store Button -->
-                    <a href="#" class="appstore-button" aria-label="Download on the App Store">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                        <div class="appstore-text">
-                            <small>Download on the</small>
-                            <strong>App Store</strong>
-                        </div>
-                    </a>
-
-                </div>
+            <p>
+                A powerful iOS companion app for Destiny players, featuring raid tracking, 
+                character informations, and comprehensive activity history powered by the Bungie.net API.
+            </p>
+            
+            <div class="badges">
+                <span class="badge">📱 iOS</span>
+                <span class="badge">🎮 Destiny Integration</span>
+                <span class="badge">🔐 OAuth Authentication</span>
+                <span class="badge">⚡ SwiftUI</span>
             </div>
 
-            <div class="section">
-                <h2>✨ Features</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>🎯 Raid Tracking</h3>
-                        <p>Browse and track raid activities with detailed statistics, achievements, and completion history.</p>
+            <div class="hero-buttons">
+                <!-- App Store Button -->
+                <a href="#" class="appstore-button" aria-label="Download on the App Store">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    <div class="appstore-text">
+                        <small>Download on the</small>
+                        <strong>App Store</strong>
                     </div>
-                    <div class="feature-card">
-                        <h3>👤 Character Informations</h3>
-                        <p>View all your Destiny characters across platforms, including light levels, classes, and equipment.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🌐 Cross-Platform Support</h3>
-                        <p>Seamlessly manage characters across Xbox, PlayStation, and other platforms.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>📊 Activity History</h3>
-                        <p>Comprehensive tracking of your game activities and progression over time.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🔒 Secure Authentication</h3>
-                        <p>OAuth integration with Bungie.net ensures secure access to your Destiny data.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🎨 Beautiful UI</h3>
-                        <p>Modern glass morphism design with custom Orbitron typography and gradient effects.</p>
-                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✨ Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🎯 Raid Tracking</h3>
+                    <p>Browse and track raid activities with detailed statistics, achievements, and completion history.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👤 Character Informations</h3>
+                    <p>View all your Destiny characters across platforms, including light levels, classes, and equipment.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌐 Cross-Platform Support</h3>
+                    <p>Seamlessly manage characters across Xbox, PlayStation, and other platforms.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Activity History</h3>
+                    <p>Comprehensive tracking of your game activities and progression over time.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 Secure Authentication</h3>
+                    <p>OAuth integration with Bungie.net ensures secure access to your Destiny data.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎨 Beautiful UI</h3>
+                    <p>Modern glass morphism design with custom Orbitron typography and gradient effects.</p>
                 </div>
             </div>
+        </div>
 
-            <div class="section">
-                <h2>📸 Screenshots</h2>
-                <div class="screenshots-scroll">
-                    <img src="screenshots/1.png" alt="Your Guardian's Legacy — app home screen">
-                    <img src="screenshots/2.png" alt="Every Clear, Every Challenge — raid overview">
-                    <img src="screenshots/3.png" alt="Stats That Matter — raid statistics dashboard">
-                    <img src="screenshots/4.png" alt="Never Forget a Flawless Run — raid detail with achievements">
-                    <img src="screenshots/5.png" alt="Prove Your Destiny Mastery — character selection and classes">
+        <div class="section">
+            <h2>📸 Screenshots</h2>
+            <div class="screenshots-scroll">
+                <img src="screenshots/1.png" alt="Your Guardian's Legacy — app home screen">
+                <img src="screenshots/2.png" alt="Every Clear, Every Challenge — raid overview">
+                <img src="screenshots/3.png" alt="Stats That Matter — raid statistics dashboard">
+                <img src="screenshots/4.png" alt="Never Forget a Flawless Run — raid detail with achievements">
+                <img src="screenshots/5.png" alt="Prove Your Destiny Mastery — character selection and classes">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛠 Technology Stack</h2>
+            <div class="tech-stack">
+                <span class="tech-tag">Swift</span>
+                <span class="tech-tag">SwiftUI</span>
+                <span class="tech-tag">OAuthSwift</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Kingfisher</span>
+                <span class="tech-tag">Bungie.net API</span>
+                <span class="tech-tag">iOS 15+</span>
+                <span class="tech-tag">Async/Await</span>
+            </div>
+
+            <h3>Architecture Highlights</h3>
+            <ul>
+                <li><strong>SwiftUI</strong> - Modern declarative UI framework</li>
+                <li><strong>MVVM Pattern</strong> - Clean separation of concerns with ViewModels</li>
+                <li><strong>Environment Objects</strong> - Centralized state management</li>
+                <li><strong>Swift Concurrency</strong> - Async/await for network operations</li>
+                <li><strong>Firebase Crashlytics Integration</strong> - Monitoring crash and errors</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📱 Key Components</h2>
+            
+            <h3>Authentication Flow</h3>
+            <p>Secure OAuth 2.0 authentication with Bungie.net, handling token management and refresh automatically.</p>
+            
+            <h3>Character View</h3>
+            <p>Displays all Destiny characters with emblem backgrounds, class information, race details, and current light level. Supports platform icons for Xbox, PlayStation, and other platforms.</p>
+            
+            <h3>Raid Details</h3>
+            <p>Comprehensive raid information including achievements, activity history, and detailed statistics for each raid encounter.</p>
+            
+            <h3>Dashboard</h3>
+            <p>Central hub for accessing all app features with an intuitive tab-based navigation system.</p>
+        </div>
+
+        <div class="section">
+            <h2>🎨 Design Philosophy</h2>
+            <p>
+                Echoes of Darkness embraces a dark, space-themed aesthetic that matches the Destiny universe. 
+                The app features:
+            </p>
+            <ul>
+                <li>Custom Orbitron font for a futuristic feel</li>
+                <li>Glass morphism effects for modern UI elements</li>
+                <li>Nebula-inspired gradient backgrounds</li>
+                <li>Smooth animations and transitions</li>
+                <li>Native platform integration with SF Symbols</li>
+            </ul>
+        </div>
+
+        <!-- ═══════════════ SUPPORT & FAQ ═══════════════ -->
+        <div class="section" id="support">
+            <h2>🛟 Support &amp; FAQ</h2>
+
+            <!-- Contact card -->
+            <div class="contact-card">
+                <div class="contact-card-icon">✉️</div>
+                <div class="contact-card-body">
+                    <h3>Contact Support</h3>
+                    <p>
+                        Having trouble? Reach out at
+                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        and include a description of the issue along with any relevant screenshots.
+                    </p>
+                    <span class="response-badge">⏱ Response within 48 hours</span>
                 </div>
             </div>
 
-            <div class="section">
-                <h2>🛠 Technology Stack</h2>
-                <div class="tech-stack">
-                    <span class="tech-tag">Swift</span>
-                    <span class="tech-tag">SwiftUI</span>
-                    <span class="tech-tag">OAuthSwift</span>
-                    <span class="tech-tag">Firebase</span>
-                    <span class="tech-tag">Kingfisher</span>
-                    <span class="tech-tag">Bungie.net API</span>
-                    <span class="tech-tag">iOS 15+</span>
-                    <span class="tech-tag">Async/Await</span>
-                </div>
+            <!-- FAQ accordion -->
+            <h3 style="margin-top: 0;">Frequently Asked Questions</h3>
+            <ul class="faq-list" id="faqList">
 
-                <h3>Architecture Highlights</h3>
-                <ul>
-                    <li><strong>SwiftUI</strong> - Modern declarative UI framework</li>
-                    <li><strong>MVVM Pattern</strong> - Clean separation of concerns with ViewModels</li>
-                    <li><strong>Environment Objects</strong> - Centralized state management</li>
-                    <li><strong>Swift Concurrency</strong> - Async/await for network operations</li>
-                    <li><strong>Firebase Crashlytics Integration</strong> - Monitoring crash and errors</li>
-                </ul>
-            </div>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How do I log in?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        You need a Bungie.net account linked to at least one gaming platform — PlayStation Network, Xbox Live, or Steam. Tap <strong>Sign in with Bungie.net</strong> on the login screen and follow the OAuth flow. Your credentials are never stored by the app.
+                    </div>
+                </li>
 
-            <div class="section">
-                <h2>📱 Key Components</h2>
-                
-                <h3>Authentication Flow</h3>
-                <p>Secure OAuth 2.0 authentication with Bungie.net, handling token management and refresh automatically.</p>
-                
-                <h3>Character View</h3>
-                <p>Displays all Destiny characters with emblem backgrounds, class information, race details, and current light level. Supports platform icons for Xbox, PlayStation, and other platforms.</p>
-                
-                <h3>Raid Details</h3>
-                <p>Comprehensive raid information including achievements, activity history, and detailed statistics for each raid encounter.</p>
-                
-                <h3>Dashboard</h3>
-                <p>Central hub for accessing all app features with an intuitive tab-based navigation system.</p>
-            </div>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Why can't I see my stats?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        Check your Bungie.net privacy settings. Go to <strong>bungie.net → Settings → Privacy</strong> and make sure <em>Show my Destiny game Activity feed</em> and the relevant activity options are enabled for third-party apps.
+                    </div>
+                </li>
 
-            <div class="section">
-                <h2>🎨 Design Philosophy</h2>
-                <p>
-                    Echoes of Darkness embraces a dark, space-themed aesthetic that matches the Destiny universe. 
-                    The app features:
-                </p>
-                <ul>
-                    <li>Custom Orbitron font for a futuristic feel</li>
-                    <li>Glass morphism effects for modern UI elements</li>
-                    <li>Nebula-inspired gradient backgrounds</li>
-                    <li>Smooth animations and transitions</li>
-                    <li>Native platform integration with SF Symbols</li>
-                </ul>
-            </div>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Which platforms are supported?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        Echoes of Darkness supports all platforms accessible via Bungie.net: PlayStation (PSN), Xbox Live, Steam, and Epic Games. Characters from all linked accounts are shown together in the app.
+                    </div>
+                </li>
 
-            <div class="section">
-                <h2>📄 License & Attribution</h2>
-                <p>
-                    This project is created by <strong>Alexandre D'AMBRISI</strong> and uses the Bungie.net API.
-                </p>
-                <p style="margin-top: 1rem; font-style: italic; color: #EBCC88;">
-                    Destiny is a registered trademark of Bungie, Inc. This app is not affiliated with or endorsed by Bungie.
-                </p>
-            </div>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How do I report a bug?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        Email <a href="mailto:your.email@example.com">your.email@example.com</a> with a short description of what happened, the steps to reproduce it, and any screenshots or screen recordings you can capture. Crash logs sent automatically via Firebase Crashlytics also help us fix issues faster.
+                    </div>
+                </li>
 
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Is the app affiliated with Bungie?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        No. Echoes of Darkness is an independent fan-made project and is not affiliated with, endorsed by, or sponsored by Bungie, Inc. Destiny® is a registered trademark of Bungie.
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📄 License &amp; Attribution</h2>
+            <p>
+                This project is created by <strong>Alexandre D'AMBRISI</strong> and uses the Bungie.net API.
+            </p>
+            <p style="margin-top: 1rem; font-style: italic; color: #EBCC88;">
+                Destiny is a registered trademark of Bungie, Inc. This app is not affiliated with or endorsed by Bungie.
+            </p>
+        </div>
 
         <!-- ═══════════════ FOOTER ═══════════════ -->
         <footer>
@@ -487,9 +709,34 @@
                 <li><a href="https://dambri.github.io/echoes-of-darkness-legal/privacy.html">Privacy Policy</a></li>
                 <li><span class="footer-sep">·</span></li>
                 <li><a href="https://dambri.github.io/echoes-of-darkness-legal/terms.html">Terms of Use</a></li>
+                <li><span class="footer-sep">·</span></li>
+                <li><a href="#support">Support &amp; FAQ</a></li>
             </ul>
         </footer>
+
     </div>
 
+    <script>
+        // Accordion FAQ
+        document.getElementById('faqList').addEventListener('click', function (e) {
+            const btn = e.target.closest('.faq-question');
+            if (!btn) return;
+
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.faq-item.open').forEach(function (el) {
+                el.classList.remove('open');
+                el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+
+            // Toggle clicked
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        });
+    </script>
 </body>
 </html>
